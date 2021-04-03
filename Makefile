@@ -13,8 +13,7 @@ LD_FLAGS = -L$(CUDA_DIR)/lib64 -lcuda -lcudart -lcublas
 
 NVCC = nvcc
 NVCC_FLAGS = -std=c++11 --compiler-options '-fPIC'
-ARCH = -gencode arch=compute_30,code=sm_30 \
-       -gencode arch=compute_35,code=sm_35 \
+ARCH = -gencode arch=compute_35,code=sm_35 \
        -gencode arch=compute_50,code=[sm_50,compute_50] \
        -gencode arch=compute_52,code=[sm_52,compute_52]
 
