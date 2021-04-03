@@ -156,9 +156,9 @@ class AddOp(Op):
         assert len(input_shapes) == 2
         if input_shapes[0] == input_shapes[1]:
             return input_shapes[0]
-        if input_shapes[0] == (1,)
+        if input_shapes[0] == (1,):
             return input_shapes[1]
-        if input_shapes[1] == (1,)
+        if input_shapes[1] == (1,):
             return input_shapes[0]
         return None
 
@@ -575,7 +575,7 @@ class ReluGradientOp(Op):
 
     def infer_shape(self, node, input_shapes):
         """TODO: Your code here"""
-        assert len(input_shapes) == 1
+        #assert len(input_shapes) == 1
         return input_shapes[0]
 
 
